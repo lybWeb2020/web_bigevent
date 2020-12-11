@@ -83,7 +83,7 @@ $(function () {
                 localStorage.setItem('token',res.token);
                 // console.log(localStorage.getItem('token'));
                 //跳转到后台主页
-                // location.href = './index.html';
+                location.href = './index.html';
                 
             }
         })
