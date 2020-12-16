@@ -149,7 +149,7 @@ $(function () {
 
     //通过代理的形式，为编辑按钮绑定点击事件处理函数
     $('tbody').on('click', '.btn-edit', function (e) {
-        
+
         e.preventDefault();
         var id = $(this).attr('data-index');
         console.log(id);
@@ -161,15 +161,14 @@ $(function () {
                 if (res.status !== 0) {
                     return layer.msg('获取文章分类数据失败！')
                 }
-                console.log(res);
+                console.log(res.data);
                 layer.msg('获取文章分类数据成功！')
                 // 调用 form.val() 快速为表单赋值
+                // form.val('formBtnEdit', res.data);
                 // location.href = '../article/art_pub.html';
-                window.location.replace('../article/art_pub.html');
             }
         })
-        
-
     });
-    
+
+
 });
